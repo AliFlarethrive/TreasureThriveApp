@@ -1,0 +1,86 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex; /* Center the game screen horizontally and vertically */
+    justify-content: center; /* Horizontal alignment */
+    align-items: center; /* Vertical alignment */
+    height: 100vh; /* Ensure the viewport height is covered */
+}
+
+/* Game container styling */
+#game-container {
+    width: 40%; /* Adjust the width as needed for screen size */
+    height: 90vh; /* Make height flexible */
+    background: url('images/treasure-background.jpeg') no-repeat center center; /* Center the background */
+    background-size: contain; /* Ensure the background image scales properly */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content inside the container */
+    align-items: center; /* Center the content horizontally */
+    text-align: center;
+    color: #fff;
+    padding: 50px 0; /* Add padding to create spacing at the top and bottom */
+}
+
+/* Grid styling */
+#grid {
+    width: 70%; /* Fit inside the rectangle area */
+    max-width: 405px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0); /* Transparent rectangle */
+    border-radius: 8px; /* Add some rounding for aesthetics */
+    padding: 10px;
+    margin-top: 320px; /* Adjusted margin to move grid into the desired position */
+}
+
+/* Box styling */
+.box {
+    width: 100%;
+    height: 100px; /* Size for portrait layout */
+    background: url('images/gift-box.png') no-repeat center center; /* Gift box image */
+    background-size: contain; /* Ensure the gift box image scales properly */
+    border: none; /* Remove border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* BET button styling */
+#bet-btn {
+    padding: 15px 25px; /* Add padding for a rounded feel */
+    font-size: 16px; /* Adjust font size for visibility */
+    background-color: #0022ff; /* Blue background color */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Make the button rounded */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+#bet-btn:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 768px) {
+    #grid {
+        gap: 8px; /* Reduce gaps for smaller screens */
+        margin-top: 40px; /* Adjust margin for mobile portrait view */
+    }
+
+    .box {
+        height: 80px; /* Slightly smaller boxes for mobile */
+    }
+}
